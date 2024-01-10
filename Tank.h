@@ -3,9 +3,12 @@
 
 class Tank : public GameObject
 {
-
-    int thModel_;
     int tbModel_;
+
+    XMVECTOR front_;
+    double speed_;
+
+
 
 public:
     //コンストラクタ

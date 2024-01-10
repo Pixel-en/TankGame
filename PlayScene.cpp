@@ -1,5 +1,6 @@
 #include "PlayScene.h"
 #include "Ground.h"
+#include "Tank.h"
 
 PlayScene::PlayScene(GameObject* parent)
 	: GameObject(parent, "PlayScene")
@@ -9,6 +10,7 @@ PlayScene::PlayScene(GameObject* parent)
 void PlayScene::Initialize()
 {
 	Instantiate<Ground>(this);
+	Instantiate<Tank>(this);
 }
 
 void PlayScene::Update()

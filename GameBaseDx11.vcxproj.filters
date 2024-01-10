@@ -24,6 +24,15 @@
       <UniqueIdentifier>{47a6a3f5-8cfd-436b-8d58-beccd108f3f3}</UniqueIdentifier>
       <Extensions>hlsl</Extensions>
     </Filter>
+    <Filter Include="SCENE">
+      <UniqueIdentifier>{60e4d07d-dbe9-4cd2-9a3b-1ce330c08d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCENE\PLAY">
+      <UniqueIdentifier>{87bc6b9f-9db2-4b60-a88c-8805e69e91c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCENE\TITLE">
+      <UniqueIdentifier>{392ec7dc-a7fc-47f3-adca-d2dfc08e665b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\BoxCollider.cpp">
@@ -80,7 +89,6 @@
     <ClCompile Include="Engine\Transform.cpp">
       <Filter>01Engine\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="Engine\Audio.cpp">
       <Filter>01Engine\ResourceManager</Filter>
     </ClCompile>
@@ -96,10 +104,21 @@
     <ClCompile Include="Engine\VFX.cpp">
       <Filter>01Engine\ResourceManager</Filter>
     </ClCompile>
-    <ClCompile Include="TitleScene.cpp" />
-    <ClCompile Include="PlayScene.cpp" />
-    <ClCompile Include="Ground.cpp" />
-    <ClCompile Include="Tank.cpp" />
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>SCENE\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="Ground.cpp">
+      <Filter>SCENE\PLAY</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>SCENE\PLAY</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>SCENE\PLAY</Filter>
+    </ClCompile>
+    <ClCompile Include="TankHead.cpp">
+      <Filter>SCENE\PLAY</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -156,7 +175,6 @@
     <ClInclude Include="Engine\Transform.h">
       <Filter>01Engine\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="TestScene.h" />
     <ClInclude Include="Engine\Audio.h">
       <Filter>01Engine\ResourceManager</Filter>
     </ClInclude>
@@ -172,10 +190,22 @@
     <ClInclude Include="Engine\VFX.h">
       <Filter>01Engine\ResourceManager</Filter>
     </ClInclude>
-    <ClInclude Include="TitleScene.h" />
-    <ClInclude Include="PlayScene.h" />
-    <ClInclude Include="Ground.h" />
-    <ClInclude Include="Tank.h" />
+    <ClInclude Include="TitleScene.h">
+      <Filter>SCENE\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>SCENE\PLAY</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
+      <Filter>SCENE\PLAY</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>SCENE\PLAY</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="TankHead.h">
+      <Filter>SCENE\PLAY</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shader\Simple2D.hlsl">
@@ -190,5 +220,10 @@
     <FxCompile Include="Assets\Shader\BillBoard.hlsl">
       <Filter>02Shader</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TankGame.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
