@@ -24,6 +24,7 @@ public:
 	//ŠJ•ú
 	void Release() override;
 
+
 	/// <summary>
 	/// ƒ‚ƒfƒ‹”Ô†‚ğ•Ô‚·ŠÖ”
 	/// </summary>
