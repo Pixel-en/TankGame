@@ -6,7 +6,7 @@ class Bullet : public GameObject
 	int hModel_;
 
 	float bulletspeed_;
-	XMFLOAT3 movedir_;
+	XMFLOAT3 movedir_; 
 
 public:
 	//コンストラクタ
@@ -27,6 +27,6 @@ public:
 	void Release() override;
 
 
-	void SetMoveDir(XMFLOAT3 _move) { movedir_ = _move; };
-	void SetSpeed(float _speed) { bulletspeed_ = _speed; };
+	void SetMoveDir(XMFLOAT3 _move) { movedir_ = _move; }
+	void SetSpeed(float _speed) { bulletspeed_ = _speed; }
 };

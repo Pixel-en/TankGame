@@ -27,18 +27,20 @@ void TankHead::Update()
 
 	if (Input::IsKeyDown(DIK_SPACE)) {
 
-		XMFLOAT3 cannonTopPos= Model::GetBonePosition(hModel_, "CannonPos");
+		XMFLOAT3 cannonTopPos = Model::GetBonePosition(hModel_, "CannonPos");
 		XMFLOAT3 cannonRootPos = Model::GetBonePosition(hModel_, "CannonRoot");
+
 		XMVECTOR vtop = XMLoadFloat3(&cannonTopPos);
 		XMVECTOR vroot = XMLoadFloat3(&cannonRootPos);
-		XMVECTOR moveDir = vroot - vtop;
+		XMVECTOR moveDir = vtop - vroot;
 		moveDir = XMVector3Normalize(moveDir);
+
 		XMFLOAT3 vmove;
 		XMStoreFloat3(&vmove, moveDir);
 
 		Bullet* pBullet = Instantiate<Bullet>(this->GetParent()->GetParent());
+		pBullet->SetPosition(cannonTopPos);
 		pBullet->SetMoveDir(vmove);
-		pBullet->SetPosition(cannonRootPos);
 		pBullet->SetSpeed(0.2);
 	}
 }
