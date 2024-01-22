@@ -94,4 +94,9 @@ void Collider::Draw(XMFLOAT3 position)
 	transform.Calclation();
 	Model::SetTransform(hDebugModel_, transform);
 	Model::Draw(hDebugModel_);
+
+
+	//transform.rotate_ = pGameObject_->GetRotate();
+	//Model::SetTransform(hDebugModel_, transform);
+	//Model::Draw(hDebugModel_);
 }

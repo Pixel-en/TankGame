@@ -1,21 +1,16 @@
 #pragma once
 #include "Engine/GameObject.h"
 
-class Tank : public GameObject
+class Enemy : public GameObject
 {
-    int tbModel_;
-
-    XMVECTOR front_;
-    double speed_;
-
-    int camState_;
+    int hModel_;
 
 public:
     //コンストラクタ
-    Tank(GameObject* parent);
+    Enemy(GameObject* parent);
 
     //デストラクタ
-    ~Tank();
+    ~Enemy();
 
     //初期化
     void Initialize() override;
@@ -28,4 +23,6 @@ public:
 
     //開放
     void Release() override;
+
+    void OnCollision(GameObject* pTarget) override;
 };

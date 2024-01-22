@@ -1,8 +1,11 @@
 #pragma once
 #include "Engine/GameObject.h"
+#include "Tank.h"
 
 class PlayScene : public GameObject
 {
+	Tank *player;
+
 public:
 	//コンストラクタ
 	//引数：parent  親オブジェクト（SceneManager）

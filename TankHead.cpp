@@ -41,7 +41,7 @@ void TankHead::Update()
 		Bullet* pBullet = Instantiate<Bullet>(this->GetParent()->GetParent());
 		pBullet->SetPosition(cannonTopPos);
 		pBullet->SetMoveDir(vmove);
-		pBullet->SetSpeed(0.2);
+		pBullet->SetSpeed(0.3);
 	}
 }
 

@@ -1,6 +1,7 @@
 #include "Bullet.h"
 #include "Engine/Model.h"
 #include "Engine/Debug.h"
+#include "Engine/Collider.h"
 
 Bullet::Bullet(GameObject* parent)
 	:GameObject(parent, "Bullet"), hModel_(-1)
@@ -13,8 +14,13 @@ Bullet::~Bullet()
 
 void Bullet::Initialize()
 {
-	hModel_= Model::Load("Model\\box.fbx");
+	hModel_= Model::Load("Model\\bullet.fbx");
 	assert(hModel_ >= 0);
+
+	SphereCollider* collision = new SphereCollider({ 0,0,0 }, 0.3f);
+	AddCollider(collision);
+
+
 }
 
 void Bullet::Update()
