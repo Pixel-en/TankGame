@@ -145,6 +145,39 @@ GameObject * GameObject::FindChildObject(const std::string & name)
 	return nullptr;
 }
 
+int GameObject::FindChildObjectNum(const std::string& name)
+{
+	//子供がいないなら終わり
+	if (childList_.empty())
+		return 0;
+
+	int num = 0;
+
+	//イテレータ
+	auto it = childList_.begin();	//先頭
+	auto end = childList_.end();	//末尾
+
+	//子オブジェクトから探す
+	while (it != end) {
+		//同じ名前のオブジェクトを見つけたらそれを返す
+		if ((*it)->GetObjectName() == name)
+			num++;
+
+		//その子供（孫）以降にいないか探す
+		GameObject* obj = (*it)->FindChildObject(name);
+		if (obj != nullptr)
+		{
+			num++;
+		}
+
+		//次の子へ
+		it++;
+	}
+
+	//見つからなかった
+	return num;
+}
+
 //オブジェクトの名前を取得
 const std::string& GameObject::GetObjectName(void) const
 {

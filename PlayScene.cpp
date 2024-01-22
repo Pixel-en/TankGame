@@ -4,6 +4,7 @@
 #include "Engine/Camera.h"
 #include "Engine/Input.h"
 #include "Engine/Debug.h"
+#include "Engine/Debug.h"
 
 PlayScene::PlayScene(GameObject* parent)
 	: GameObject(parent, "PlayScene")
@@ -20,14 +21,18 @@ void PlayScene::Initialize()
 		e->SetPosition(((float)rand() / RAND_MAX * 2.0 - 1.0) * 25, 5, ((float)rand() / RAND_MAX * 2.0 - 1.0) * 25);
 	}
 
+	framecnt = 0;
 }
 
 void PlayScene::Update()
 {
-	/*Camera::SetTarget(player->GetPosition());
-	XMFLOAT3 camPos = player->GetPosition();
-	camPos.y += y;
-	camPos.z -= z;*/
+	//デバッグで更新
+	if (framecnt == 60) {
+		Debug::Log(FindChildObjectNum("Enemy"),TRUE);
+		framecnt = 0;
+	}
+	else
+		framecnt++;
 
 }
 

@@ -2,7 +2,6 @@
 #include "Engine/Model.h"
 #include "Engine/Collider.h"
 #include "Ground.h"
-#include "Engine/Debug.h"
 
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
@@ -60,12 +59,5 @@ void Enemy::OnCollision(GameObject* pTarget)
 		this->KillMe();
 		pTarget->KillMe();
 	}
-
-	if (pTarget->GetObjectName() == "Tank") {
-		//this->KillMe();
-		//pTarget->KillMe();
-		Debug::Log("EnemyHit",TRUE);
-	}
-
 
 }

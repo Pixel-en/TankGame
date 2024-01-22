@@ -88,6 +88,12 @@ public:
 	//戻値：見つけたオブジェクトのアドレス（見つからなければnullptr）
 	GameObject* FindChildObject(const std::string& name);
 
+	//名前でオブジェクトを検索して見つかった数を返す（対象は自分の子供以下）
+	//引数：name	検索する名前
+	//戻値：見つかったオブジェクトの数
+	//作成者：遠藤
+	int FindChildObjectNum(const std::string& name);
+
 	//名前でオブジェクトを検索（対象は全体）
 	//引数：検索する名前
 	//戻値：見つけたオブジェクトのアドレス

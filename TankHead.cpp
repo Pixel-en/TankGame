@@ -25,7 +25,7 @@ void TankHead::Update()
 	if (Input::IsKey(DIK_RIGHT))
 		transform_.rotate_.y += 4.0f;
 
-	if (Input::IsKeyDown(DIK_SPACE)) {
+	if (Input::IsKeyDown(DIK_SPACE) && FindObject("Bullet") == nullptr) {
 
 		XMFLOAT3 cannonTopPos = Model::GetBonePosition(hModel_, "CannonPos");
 		XMFLOAT3 cannonRootPos = Model::GetBonePosition(hModel_, "CannonRoot");

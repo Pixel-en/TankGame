@@ -6,6 +6,9 @@ class TitleScene : public GameObject
 {
 
 	int tImage_;
+	int tplay_;
+
+	Transform tpTrans_;
 
 public:
 	//コンストラクタ

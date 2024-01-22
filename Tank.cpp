@@ -5,7 +5,6 @@
 #include "TankHead.h"
 #include "Engine/Debug.h"
 #include "Engine/Camera.h"
-#include "Engine/Collider.h"
 
 //ƒJƒƒ‰§Œä
 enum CAM_TYPE
@@ -32,8 +31,6 @@ void Tank::Initialize()
 {
 	Instantiate<TankHead>(this);
 	tbModel_ = Model::Load("Model\\TankBody.fbx");
-	BoxCollider* collision = new BoxCollider({0 ,0,0 }, { 2,2.4,2.9 });
-	AddCollider(collision);
 
 }
 
