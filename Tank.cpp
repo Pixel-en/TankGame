@@ -31,7 +31,7 @@ void Tank::Initialize()
 {
 	Instantiate<TankHead>(this);
 	tbModel_ = Model::Load("Model\\TankBody.fbx");
-
+	assert(tbModel_ >= 0);
 }
 
 void Tank::Update()
@@ -53,6 +53,9 @@ void Tank::Update()
 	{
 		dir = -1.0;
 	}
+
+	if (Input::IsKey(DIK_LSHIFT))
+		speed_ = 1.0;
 
 	XMMATRIX rotY = XMMatrixIdentity();
 	XMVECTOR rotVec{ 0.0,0.0 };

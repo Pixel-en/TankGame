@@ -39,6 +39,7 @@ void Bullet::Draw()
 {
 	Model::SetTransform(hModel_, transform_);
 	Model::Draw(hModel_);
+
 }
 
 void Bullet::Release()

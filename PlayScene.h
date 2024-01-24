@@ -2,11 +2,13 @@
 #include "Engine/GameObject.h"
 #include "Tank.h"
 
+const int ENEMIES{ 50 };
+
 class PlayScene : public GameObject
 {
 	Tank *player;
 
-	int framecnt;
+	int EnemyNum_;
 
 public:
 	//コンストラクタ
@@ -24,4 +26,8 @@ public:
 
 	//開放
 	void Release() override;
+
+	void DescEnemy() { EnemyNum_--; }
+	bool IsEnemyLeft() { return EnemyNum_ > 0; }
+	int  GetEnemyNum() { return EnemyNum_; }
 };

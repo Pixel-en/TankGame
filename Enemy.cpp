@@ -2,6 +2,8 @@
 #include "Engine/Model.h"
 #include "Engine/Collider.h"
 #include "Ground.h"
+#include "PlayScene.h"
+#include "Engine/Debug.h"
 
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
@@ -56,8 +58,10 @@ void Enemy::Release()
 void Enemy::OnCollision(GameObject* pTarget)
 {
 	if (pTarget->GetObjectName() == "Bullet") {
+		((PlayScene*)GetParent())->DescEnemy();
 		this->KillMe();
 		pTarget->KillMe();
+		Debug::Log(((PlayScene)GetParent()).GetEnemyNum(), TRUE);
 	}
 
 }

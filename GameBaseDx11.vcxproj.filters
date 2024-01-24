@@ -125,6 +125,7 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>SCENE\PLAY</Filter>
     </ClCompile>
+    <ClCompile Include="HUD.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -218,6 +219,7 @@
     <ClInclude Include="Bullet.h">
       <Filter>SCENE\PLAY</Filter>
     </ClInclude>
+    <ClInclude Include="HUD.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shader\Simple2D.hlsl">
