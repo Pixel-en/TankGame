@@ -33,6 +33,12 @@
     <Filter Include="SCENE\TITLE">
       <UniqueIdentifier>{392ec7dc-a7fc-47f3-adca-d2dfc08e665b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SCENE\Clear">
+      <UniqueIdentifier>{68fcd9b7-c9d9-40c4-8b77-0755ddc00ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCENE\Over">
+      <UniqueIdentifier>{3970738e-1e4f-4a8c-afcb-e71c7a211ff2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\BoxCollider.cpp">
@@ -125,7 +131,15 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>SCENE\PLAY</Filter>
     </ClCompile>
-    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="OverScene.cpp">
+      <Filter>SCENE\Over</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearScene.cpp">
+      <Filter>SCENE\Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>SCENE\PLAY</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -219,7 +233,15 @@
     <ClInclude Include="Bullet.h">
       <Filter>SCENE\PLAY</Filter>
     </ClInclude>
-    <ClInclude Include="HUD.h" />
+    <ClInclude Include="OverScene.h">
+      <Filter>SCENE\Over</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearScene.h">
+      <Filter>SCENE\Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>SCENE\PLAY</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shader\Simple2D.hlsl">

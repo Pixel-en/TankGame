@@ -2,7 +2,7 @@
 #include "Engine/GameObject.h"
 #include "Tank.h"
 
-const int ENEMIES{ 50 };
+const int ENEMIES{ 10 };
 
 class PlayScene : public GameObject
 {

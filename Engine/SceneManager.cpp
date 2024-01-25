@@ -2,6 +2,8 @@
 
 #include "../TitleScene.h"
 #include "../PlayScene.h"
+#include "../ClearScene.h"
+#include "../OverScene.h"
 #include "Model.h"
 #include "Image.h"
 #include "Audio.h"
@@ -41,6 +43,8 @@ void SceneManager::Update()
 		{
 		case TITLE_SCENE: Instantiate<TitleScene>(this); break;
 		case PLAY_SCENE: Instantiate<PlayScene>(this); break;
+		case GAMECLEAR_SCENE: Instantiate<ClearScene>(this); break;
+		case GAMEOVER_SCENE: Instantiate<OverScene>(this); break;
 
 		}
 		Audio::Initialize();

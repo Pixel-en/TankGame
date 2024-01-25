@@ -64,4 +64,8 @@ void Enemy::OnCollision(GameObject* pTarget)
 		Debug::Log(((PlayScene)GetParent()).GetEnemyNum(), TRUE);
 	}
 
+	if (pTarget->GetObjectName() == "Tank") {
+		pTarget->KillMe();
+	}
+
 }

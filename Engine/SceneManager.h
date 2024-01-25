@@ -6,7 +6,9 @@
 enum SCENE_ID
 {
 	TITLE_SCENE=0,
-	PLAY_SCENE
+	PLAY_SCENE,
+	GAMECLEAR_SCENE,
+	GAMEOVER_SCENE
 };
 
 //-----------------------------------------------------------

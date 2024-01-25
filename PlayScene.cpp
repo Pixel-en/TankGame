@@ -4,6 +4,7 @@
 #include "Engine/Camera.h"
 #include "Engine/Input.h"
 #include "HUD.h"
+#include "Engine/SceneManager.h"
 
 
 PlayScene::PlayScene(GameObject* parent)
@@ -29,8 +30,14 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
-
-
+	if (FindObject("Enemy")==nullptr) {
+		SceneManager* s = (SceneManager*)FindObject("SceneManager");
+		s->ChangeScene(GAMECLEAR_SCENE);
+	}
+	if (FindObject("Tank") == nullptr) {
+		SceneManager* s = (SceneManager*)FindObject("SceneManager");
+		s->ChangeScene(GAMEOVER_SCENE);
+	}
 }
 
 void PlayScene::Draw()
